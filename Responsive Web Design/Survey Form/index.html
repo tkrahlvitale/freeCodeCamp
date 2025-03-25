@@ -6,46 +6,112 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <h1 id="title">Overwatch™ 2 Survey Form</h1>
     <p id="description">Thank you for taking the time to help us improve the platform</p>
+
     <form id="survey-form">
       <fieldset>
-        <label id="name-label">Name <input id="name" type="text" placeholder="Enter your name" required/></label><br>
-        <label id="email-label">Email <input id="email" type="email" placeholder="Enter your email" required/></label><br>
-        <label id="number-label">Age <input id="number" type="number" min="16" max="140" placeholder="Enter your age" required/></label><br>
-        <label>Which option best describes your current role?
-          <select id="dropdown" name="dropdown">
-            <option value="">Select current role</option>
-            <option value="1">Student</option>
-            <option value="2">Full Time Job</option>
-            <option value="3">Full Time Learner</option>
-            <option value="4">Prefer not to say</option>
-            <option value="5">Other</option>
-          </select>
-        </label><br>
-        <label>Would you recommend freeCodeCamp to a friend?</label><br>
-        <label><input name="recommendation" type="radio" value="YesRec" class="inline" checked/> Definitely</label><br>
-        <label><input name="recommendation" type="radio" value="MaybeRec" class="inline"/> Maybe</label><br>
-        <label><input name="recommendation" type="radio" value="NoRec" class="inline"/> Not sure</label><br>
-        <label>What is your favorite feature of freeCodeCamp?
-          <select>
+
+        <label id="name-label">BattleTag™ Name <span class="required"> *</span><input id="name" type="text" placeholder="Enter your BattleTag™ name" required/></label>
+
+        <label id="name-number-label">BattleTag™ Number <span class="required"> *</span><input id="number" type="number" min="0" max="100000" placeholder="Enter your BattleTag™ number" required/></label>
+
+        <label id="email-label">Email <span class="required"> *</span><input id="email" type="email" placeholder="Enter your email" required/></label>
+
+        <label id="number-label">Age <span class="required"> *</span><input id="number" type="number" min="13" max="140" placeholder="Enter your age" required/></label>
+
+        <label class="main-label">What is your region? <span class="required"> *</span>
+          <select id="dropdown" required>
             <option value="">Select an option</option>
-            <option value="1">Challenges</option>
-            <option value="2">Projects</option>
-            <option value="3">Community</option>
-            <option value="4">Open Source</option>
+            <option value="1">America</option>
+            <option value="2">Europe</option>
+            <option value="3">Asia</option>
           </select>
-        </label><br>
-        <label>What would you like to see improved?</label><br>
-        <label class="check_box"><input type="checkbox" value="Front"/> Front-end Projects</label>
-        <label class="check_box"><input type="checkbox" value="Back"/> Back-end Projects</label>
-        <label class="check_box"><input type="checkbox" value="DataVis"/> Data Visualization</label>
-        <label class="check_box"><input type="checkbox" value="Challenges"/> Challenges</label>
-        <label class="check_box"><input type="checkbox" value="OPComm"/> Open Source Community</label>
-        <label>Any comments or suggestions?
+        </label>
+        <label class="main-label">What is your gaming platform of choice? <span class="required"> *</span>
+          <select id="dropdown" required>
+            <option value="">Select an option</option>
+            <option value="1">PC</option>
+            <option value="2">PlayStation</option>
+            <option value="3">Xbox</option>
+            <option value="4">Nintendo Switch</option>
+          </select>
+        </label>
+
+        <label class="main-label">How long have you been playing Overwatch™? <span class="required"> *</span></label>
+        <label><input name="playtime" type="radio" value="less-sixm" class="inline" checked/> Less than 6 months</label>
+        <label><input name="playtime" type="radio" value="sixm-oney" class="inline"/> Between 6 months and 1 year</label>
+        <label><input name="playtime" type="radio" value="oney-threey" class="inline"/> Between 1 and 3 years</label>
+        <label><input name="playtime" type="radio" value="3y-more" class="inline"/> More than 3 years</label>
+
+        <label class="main-label">What is your main role in the game? <span class="required"> *</span></label>
+        <label><input name="role" type="radio" value="all" class="inline" checked/> I play all roles</label>
+        <label><input name="role" type="radio" value="tank" class="inline" /> Tank</label>
+        <label><input name="role" type="radio" value="damage" class="inline"/> Damage</label>
+        <label><input name="role" type="radio" value="support" class="inline"/> Support</label>
+
+        <label class="main-label">Who is your favorite hero and why?
+          <textarea placeholder="Enter your comment here..."></textarea>
+        </label>
+        <label class="main-label">What is your favorite game mode? <span class="required"> *</span></label>
+        <label><input name="game-mode" type="radio" value="quickplay" class="inline" checked/> Quick Play</label>
+        <label><input name="game-mode" type="radio" value="competitive" class="inline"/> Competitive</label>
+        <label><input name="game-mode" type="radio" value="arcade" class="inline"/> Arcade</label>
+        <label><input name="game-mode" type="radio" value="custom" class="inline"/> Custom Games</label>
+
+        <label class="main-label">What is your Competitive Skill Tier? <span class="required"> *</span>
+          <select id="dropdown" required>
+            <option value="">Select an option</option>
+            <option value="1">Bronze</option>
+            <option value="2">Silver</option>
+            <option value="3">Gold</option>
+            <option value="4">Platinum</option>
+            <option value="5">Diamond</option>
+            <option value="6">Master</option>
+            <option value="7">Grand Master</option>
+            <option value="8">Champion</option>
+            <option value="8">I don't play Competitive</option>
+          </select>
+        </label>
+
+        <label class="main-label">How would you rate the current state of the game? <span class="required"> *</span></label>
+        <label><input name="state" type="radio" value="vgood" class="inline" checked/> Very Good</label>
+        <label><input name="state" type="radio" value="good" class="inline"/> Good</label>
+        <label><input name="state" type="radio" value="regular" class="inline"/> Regular</label>
+        <label><input name="state" type="radio" value="bad" class="inline"/> Bad</label>
+        <label><input name="state" type="radio" value="vbad" class="inline"/> Very Bad</label>
+
+
+        <label class="main-label">What aspects of the game would you like to see improved?</label>
+        <label class="check_box"><input type="checkbox" value="balance"/> Hero balance</label>
+        <label class="check_box"><input type="checkbox" value="matchmaking"/> Matchmaking</label>
+        <label class="check_box"><input type="checkbox" value="servers"/> Servers and latency</label>
+        <label class="check_box"><input type="checkbox" value="events-content"/> Events and new content</label>
+        <label class="check_box"><input type="checkbox" value="progression"/> Progression and reward system</label>
+
+        <label class="main-label">Have you purchased skins or additional content in Overwatch™? <span class="required"> *</span></label>
+        <label><input name="purchase" type="radio" value="freq" class="inline" checked/> Yes, frequently</label>
+        <label><input name="purchase" type="radio" value="occa" class="inline"/> Yes, occasionally</label>
+        <label><input name="purchase" type="radio" value="no" class="inline"/> No</label>
+
+        <label class="main-label">Would you like to see changes in the game's monetization model?
+          <textarea placeholder="Enter your opinion here..."></textarea>        
+        </label>
+
+
+
+        <label class="main-label">Would you recommend Overwatch™ to a friend? <span class="required"> *</span></label>
+        <label><input name="recommendation" type="radio" value="YesRec" class="inline" checked/> Definitely</label>
+        <label><input name="recommendation" type="radio" value="MaybeRec" class="inline"/> Maybe</label>
+        <label><input name="recommendation" type="radio" value="NoRec" class="inline"/> Not sure</label>
+
+        <label class="main-label">What do you like the most about Overwatch™?
           <textarea placeholder="Enter your comment here..."></textarea>        
-        </label><br>
+        </label>
+
         <input id="submit" value="Submit" type="submit"/>
+
+        <span class="required">(*) required field</span>
       </fieldset>
     </form>
   </body>
